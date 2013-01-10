@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FHELoginController.h
 //  five_hundred_errors_ios
 //
 //  Created by Kevin Disneur on 09/01/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface FHELoginController : UIView
 
 @end

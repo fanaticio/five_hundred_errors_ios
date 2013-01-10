@@ -24,6 +24,16 @@
 		167E84EB169E062500FA40BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167E84CA169E062500FA40BE /* CoreData.framework */; };
 		167E84F3169E062500FA40BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 167E84F1169E062500FA40BE /* InfoPlist.strings */; };
 		167E84F6169E062500FA40BE /* five_hundred_errors_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E84F5169E062500FA40BE /* five_hundred_errors_iosTests.m */; };
+		167E8500169E065500FA40BE /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 167E84FF169E065500FA40BE /* iphone.storyboard */; };
+		167E8518169E0ED800FA40BE /* FHELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E8517169E0ED800FA40BE /* FHELoginViewController.m */; };
+		167E851F169E18E600FA40BE /* FHEListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E851E169E18E600FA40BE /* FHEListViewController.m */; };
+		167E8525169E196800FA40BE /* FHEDetailErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E8524169E196800FA40BE /* FHEDetailErrorViewController.m */; };
+		167E852D169E1F0A00FA40BE /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E852C169E1F0A00FA40BE /* ConnectionManager.m */; };
+		167E853B169E298400FA40BE /* FHEAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E853A169E298400FA40BE /* FHEAccount.m */; };
+		167E853E169E29C000FA40BE /* FHEAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E853D169E29C000FA40BE /* FHEAccountService.m */; };
+		167E853F169E2C9900FA40BE /* FHEAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E853D169E29C000FA40BE /* FHEAccountService.m */; };
+		16BA4539169E9C32003DE4FB /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BA4537169E9C32003DE4FB /* menu.png */; };
+		16BA453A169E9C32003DE4FB /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BA4538169E9C32003DE4FB /* menu@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +68,21 @@
 		167E84F2169E062500FA40BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		167E84F4169E062500FA40BE /* five_hundred_errors_iosTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = five_hundred_errors_iosTests.h; sourceTree = "<group>"; };
 		167E84F5169E062500FA40BE /* five_hundred_errors_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = five_hundred_errors_iosTests.m; sourceTree = "<group>"; };
+		167E84FF169E065500FA40BE /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iphone.storyboard; path = ../iphone.storyboard; sourceTree = "<group>"; };
+		167E8516169E0ED800FA40BE /* FHELoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHELoginViewController.h; path = controllers/FHELoginViewController.h; sourceTree = "<group>"; };
+		167E8517169E0ED800FA40BE /* FHELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHELoginViewController.m; path = controllers/FHELoginViewController.m; sourceTree = "<group>"; };
+		167E851D169E18E600FA40BE /* FHEListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHEListViewController.h; path = controllers/FHEListViewController.h; sourceTree = "<group>"; };
+		167E851E169E18E600FA40BE /* FHEListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHEListViewController.m; path = controllers/FHEListViewController.m; sourceTree = "<group>"; };
+		167E8523169E196800FA40BE /* FHEDetailErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHEDetailErrorViewController.h; path = controllers/FHEDetailErrorViewController.h; sourceTree = "<group>"; };
+		167E8524169E196800FA40BE /* FHEDetailErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHEDetailErrorViewController.m; path = controllers/FHEDetailErrorViewController.m; sourceTree = "<group>"; };
+		167E852B169E1F0A00FA40BE /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = Services/ConnectionManager.h; sourceTree = "<group>"; };
+		167E852C169E1F0A00FA40BE /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = Services/ConnectionManager.m; sourceTree = "<group>"; };
+		167E8539169E298400FA40BE /* FHEAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHEAccount.h; path = Models/FHEAccount.h; sourceTree = "<group>"; };
+		167E853A169E298400FA40BE /* FHEAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHEAccount.m; path = Models/FHEAccount.m; sourceTree = "<group>"; };
+		167E853C169E29C000FA40BE /* FHEAccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FHEAccountService.h; path = Services/FHEAccountService.h; sourceTree = "<group>"; };
+		167E853D169E29C000FA40BE /* FHEAccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHEAccountService.m; path = Services/FHEAccountService.m; sourceTree = "<group>"; };
+		16BA4537169E9C32003DE4FB /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		16BA4538169E9C32003DE4FB /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +145,15 @@
 		167E84CC169E062500FA40BE /* five_hundred_errors_ios */ = {
 			isa = PBXGroup;
 			children = (
+				167E8538169E293C00FA40BE /* Models */,
+				167E852A169E1EAE00FA40BE /* Services */,
+				167E8501169E097900FA40BE /* Controllers */,
 				167E84D5169E062500FA40BE /* AppDelegate.h */,
 				167E84D6169E062500FA40BE /* AppDelegate.m */,
 				167E84DE169E062500FA40BE /* five_hundred_errors_ios.xcdatamodeld */,
+				16BA4537169E9C32003DE4FB /* menu.png */,
+				16BA4538169E9C32003DE4FB /* menu@2x.png */,
+				167E84FF169E065500FA40BE /* iphone.storyboard */,
 				167E84CD169E062500FA40BE /* Supporting Files */,
 			);
 			path = five_hundred_errors_ios;
@@ -159,6 +190,39 @@
 				167E84F1169E062500FA40BE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		167E8501169E097900FA40BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				167E8516169E0ED800FA40BE /* FHELoginViewController.h */,
+				167E8517169E0ED800FA40BE /* FHELoginViewController.m */,
+				167E851D169E18E600FA40BE /* FHEListViewController.h */,
+				167E851E169E18E600FA40BE /* FHEListViewController.m */,
+				167E8523169E196800FA40BE /* FHEDetailErrorViewController.h */,
+				167E8524169E196800FA40BE /* FHEDetailErrorViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		167E852A169E1EAE00FA40BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				167E852B169E1F0A00FA40BE /* ConnectionManager.h */,
+				167E852C169E1F0A00FA40BE /* ConnectionManager.m */,
+				167E853C169E29C000FA40BE /* FHEAccountService.h */,
+				167E853D169E29C000FA40BE /* FHEAccountService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		167E8538169E293C00FA40BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				167E8539169E298400FA40BE /* FHEAccount.h */,
+				167E853A169E298400FA40BE /* FHEAccount.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +300,9 @@
 				167E84D9169E062500FA40BE /* Default.png in Resources */,
 				167E84DB169E062500FA40BE /* Default@2x.png in Resources */,
 				167E84DD169E062500FA40BE /* Default-568h@2x.png in Resources */,
+				167E8500169E065500FA40BE /* iphone.storyboard in Resources */,
+				16BA4539169E9C32003DE4FB /* menu.png in Resources */,
+				16BA453A169E9C32003DE4FB /* menu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +337,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167E853F169E2C9900FA40BE /* FHEAccountService.m in Sources */,
 				167E84D3169E062500FA40BE /* main.m in Sources */,
 				167E84D7169E062500FA40BE /* AppDelegate.m in Sources */,
 				167E84E0169E062500FA40BE /* five_hundred_errors_ios.xcdatamodeld in Sources */,
+				167E8518169E0ED800FA40BE /* FHELoginViewController.m in Sources */,
+				167E851F169E18E600FA40BE /* FHEListViewController.m in Sources */,
+				167E8525169E196800FA40BE /* FHEDetailErrorViewController.m in Sources */,
+				167E852D169E1F0A00FA40BE /* ConnectionManager.m in Sources */,
+				167E853B169E298400FA40BE /* FHEAccount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				167E84F6169E062500FA40BE /* five_hundred_errors_iosTests.m in Sources */,
+				167E853E169E29C000FA40BE /* FHEAccountService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +515,7 @@
 				167E84FB169E062500FA40BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		167E84FC169E062500FA40BE /* Build configuration list for PBXNativeTarget "five_hundred_errors_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +524,7 @@
 				167E84FE169E062500FA40BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

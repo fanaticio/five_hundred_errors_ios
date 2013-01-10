@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FHEListViewController.h
 //  five_hundred_errors_ios
 //
 //  Created by Kevin Disneur on 09/01/13.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FHEAccount.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface FHEListViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) FHEAccount *account;
 
 @end
