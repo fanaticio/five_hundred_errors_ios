@@ -42,7 +42,16 @@
     [[FHEAccountService sharedService] createAccountWithEmail:self.email.text
                                                      andToken:self.token.text];
     
-    return [[FHEAccountService sharedService] currentAccount] != nil;
+    if ([[FHEAccountService sharedService] currentAccount] == nil) {
+        [[[UIAlertView alloc] initWithTitle:@"Connection error"
+                                    message:@"Invalid email or token. Check your informations again"
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
+        return NO;
+    }
+    
+    return YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
