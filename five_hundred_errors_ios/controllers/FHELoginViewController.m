@@ -30,11 +30,9 @@
     if(textfield == self.email) {
         [self.token becomeFirstResponder];
     }else {
-        // try to do transition to List View
-        // * code below doesn't work because it doesn't call shouldPerform...
-        //   [self performSegueWithIdentifier:@"fromConnectionToList" sender:self];
-        // * another idea could be manually trigger click on save button
-        //   [saveButton .....] // But I don't know what method I can call
+        if ([self shouldPerformSegueWithIdentifier:@"fromConnectionToList" sender:self]) {
+            [self performSegueWithIdentifier:@"fromConnectionToList" sender:self];
+        }
     }
     return YES;
 }

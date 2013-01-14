@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FHELoginViewController : UIViewController
+@interface FHELoginViewController : UITableViewController
 
 @property(nonatomic) IBOutlet UITextField *email;
 @property(nonatomic) IBOutlet UITextField *token;
