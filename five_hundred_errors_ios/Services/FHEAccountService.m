@@ -52,6 +52,9 @@ static FHEAccountService *sharedService;
 
 - (void)createAccountWithEmail:(NSString *)email andToken:(NSString *)token
 {
+    if ([email isEqual:@""] || [token isEqual:@""]) {
+        return;
+    }
     NSManagedObjectContext *managedObjectContext = [[ConnectionManager sharedConnection] managedObjectContext];
     FHEAccount *account = [self currentAccount];
     
