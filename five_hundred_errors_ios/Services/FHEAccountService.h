@@ -14,6 +14,6 @@
 + (FHEAccountService *)sharedService;
 
 - (FHEAccount *)currentAccount;
-- (void)createAccountWithEmail:(NSString *)email andToken:(NSString *)token;
+- (BOOL)createAccountWithEmail:(NSString *)email andToken:(NSString *)token;
 
 @end

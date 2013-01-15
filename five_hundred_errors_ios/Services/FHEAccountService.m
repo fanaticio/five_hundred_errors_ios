@@ -50,10 +50,10 @@ static FHEAccountService *sharedService;
     return currentAccount;
 }
 
-- (void)createAccountWithEmail:(NSString *)email andToken:(NSString *)token
+- (BOOL)createAccountWithEmail:(NSString *)email andToken:(NSString *)token
 {
     if ([email isEqual:@""] || [token isEqual:@""]) {
-        return;
+        return NO;
     }
     NSManagedObjectContext *managedObjectContext = [[ConnectionManager sharedConnection] managedObjectContext];
     FHEAccount *account = [self currentAccount];
@@ -78,6 +78,8 @@ static FHEAccountService *sharedService;
     
     NSError *error = nil;
     [managedObjectContext save:&error];
+    
+    return [self currentAccount] != nil;
 }
 
 @end
