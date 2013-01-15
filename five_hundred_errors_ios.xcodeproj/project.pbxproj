@@ -34,6 +34,7 @@
 		167E853F169E2C9900FA40BE /* FHEAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 167E853D169E29C000FA40BE /* FHEAccountService.m */; };
 		16BA4539169E9C32003DE4FB /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BA4537169E9C32003DE4FB /* menu.png */; };
 		16BA453A169E9C32003DE4FB /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BA4538169E9C32003DE4FB /* menu@2x.png */; };
+		16DDC73216A5E2F500A0301B /* UIBlockingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16DDC73116A5E2F500A0301B /* UIBlockingContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		167E853D169E29C000FA40BE /* FHEAccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FHEAccountService.m; path = Services/FHEAccountService.m; sourceTree = "<group>"; };
 		16BA4537169E9C32003DE4FB /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		16BA4538169E9C32003DE4FB /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		16DDC73016A5E2F500A0301B /* UIBlockingContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBlockingContentView.h; path = Helpers/UIBlockingContentView.h; sourceTree = "<group>"; };
+		16DDC73116A5E2F500A0301B /* UIBlockingContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIBlockingContentView.m; path = Helpers/UIBlockingContentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1676F62F16A589EF00B738F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				16DDC73016A5E2F500A0301B /* UIBlockingContentView.h */,
+				16DDC73116A5E2F500A0301B /* UIBlockingContentView.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		167E84B5169E062500FA40BE = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 		167E84CC169E062500FA40BE /* five_hundred_errors_ios */ = {
 			isa = PBXGroup;
 			children = (
+				1676F62F16A589EF00B738F0 /* Helpers */,
 				167E8538169E293C00FA40BE /* Models */,
 				167E852A169E1EAE00FA40BE /* Services */,
 				167E8501169E097900FA40BE /* Controllers */,
@@ -346,6 +359,7 @@
 				167E8525169E196800FA40BE /* FHEDetailErrorViewController.m in Sources */,
 				167E852D169E1F0A00FA40BE /* ConnectionManager.m in Sources */,
 				167E853B169E298400FA40BE /* FHEAccount.m in Sources */,
+				16DDC73216A5E2F500A0301B /* UIBlockingContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
