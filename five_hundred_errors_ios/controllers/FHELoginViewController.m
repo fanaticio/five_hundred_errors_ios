@@ -9,6 +9,7 @@
 #import "FHELoginViewController.h"
 #import "FHEAccountService.h"
 #import "FHEListViewController.h"
+#import "UIBlockingContentView.h"
 
 @interface FHELoginViewController ()
 
@@ -37,22 +38,30 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    return [self processBlockingContentWithTitle:@"Connection"
-                                  message:@"Try to sign in to the server"
-                                   action:^{
-                                       return [[FHEAccountService sharedService] createAccountWithEmail:self.email.text
-                                                         andToken:self.token.text];
-                                   }
-                                onSuccess:^{}
-                                  onError:^{
-                                      [[[UIAlertView alloc] initWithTitle:@"Connection error"
-                                                                  message:@"Invalid email or token. Check your informations again"
-                                                                 delegate:self
-                                                        cancelButtonTitle:@"Cancel"
-                                                        otherButtonTitles:@"Retry", nil] show];
-                                  }
-     
-     ];
+    UIBlockingContentViewBlockingAction blockingAction = ^{
+        UIBlockingContentViewResultMessage resultMessage;
+        resultMessage.success = [[FHEAccountService sharedService] createAccountWithEmail:self.email.text
+                                                                                 andToken:self.token.text];
+        if (!resultMessage.success) {
+            resultMessage.message = @"Invalid email or token. Check your informations again";
+        }
+        
+        return resultMessage;
+    };
+    
+    UIBlockingContentViewResultHandler errorAction = ^(UIBlockingContentViewResultMessage result){
+        [[[UIAlertView alloc] initWithTitle:@"Connection error"
+                                    message:result.message
+                                   delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"Retry", nil] show];
+    };
+    
+    UIBlockingContentView *blockingContentView = [[UIBlockingContentView alloc] initWithTitle:@"Connection"
+                                                                                      message:@"Try to sign in to the server"
+                                                                                       action:blockingAction
+                                                                                      onError:errorAction];
+    return [blockingContentView run].success;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -69,36 +78,11 @@
     }
 }
 
-- (BOOL)processBlockingContentWithTitle:(NSString *)title message:(NSString *)message action:(BOOL (^)(void))blockingAction onSuccess:(void (^)(void))successAction onError:(void (^)(void))errorAction
-{
-    UIAlertView *processLoginView = [[UIAlertView alloc] initWithTitle:title
-                                                               message:message
-                                                              delegate:self
-                                                     cancelButtonTitle:nil
-                                                     otherButtonTitles:nil];
-    
-    UIActivityIndicatorView *loader = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [loader startAnimating];
-    [loader setFrame:CGRectMake(125, 70, 37, 37)];
-    [processLoginView addSubview:loader];
-    
-    [processLoginView show];
-    
-    BOOL blocking_action_return = blockingAction();
-    
-    [processLoginView dismissWithClickedButtonIndex:0 animated:YES];
-    
-    blocking_action_return ? successAction() : errorAction();
-    
-    return blocking_action_return;
-}
-
 -(void) performSegueManuallyWithIdentifier:(NSString *)identifier
 {
     if ([self shouldPerformSegueWithIdentifier:identifier sender:self]) {
         [self performSegueWithIdentifier:identifier sender:self];
     }
 }
-
 
 @end
